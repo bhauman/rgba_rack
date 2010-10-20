@@ -15,9 +15,7 @@ module Rack
         blob = i.to_blob            
         [200, {"Content-Type" => "image/png", 
            "Content-Length" => blob.length.to_s,
-           "Etag" =>   Digest::MD5.hexdigest(blob),
-           "Cache-Control" => 'public, max-age=31557600',            
-           "Last-Modified" => Time.new.httpdate          
+           "Cache-Control" => 'public, max-age=31557600'
          }, blob.to_s]
       else
         @app.call(env)
