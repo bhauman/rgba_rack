@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'RMagick'
+require 'rmagick'
 require 'rack_rgba'
 require 'rack_gradient'
 require 'rack_noise'
