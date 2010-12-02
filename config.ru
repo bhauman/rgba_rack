@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'RMagick'
 require 'rack_rgba'
+require 'rack_color_img'
 require 'rack_gradient'
 require 'rack_noise'
 require 'rack_noise_gradient'
@@ -18,6 +19,7 @@ use Rack::Cache,
 
 # use Rack::Reloader
 use Rack::Rgba
+use Rack::ColorImg
 use Rack::Gradient
 use Rack::Noise
 use Rack::NoiseGradient
