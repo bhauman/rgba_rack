@@ -7,7 +7,7 @@ module Rack
       @app = app
     end
     def call(env)
-      if colors = env["PATH_INFO"].match(%r{/color_img/(\d{1,3})\.png})
+      if colors = env["PATH_INFO"].match(%r{/hue_img/(\d{1,3})\.png})
         request = Rack::Request.new(env)
         # we should really set an early timeout here because we aren't
         # using event machine.  This could hang too long for our
