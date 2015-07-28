@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 
 module Rack
   class Gradient

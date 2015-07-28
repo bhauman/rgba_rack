@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 require 'open-uri'
 
 module Rack
