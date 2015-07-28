@@ -1,14 +1,14 @@
 require 'rubygems'
-require 'RMagick'
-require 'rack_rgba'
-require 'rack_color_img'
-require 'rack_gradient'
-require 'rack_noise'
-require 'rack_noise_gradient'
-#require 'rack/reloader'
+require 'rmagick'
+require './rack_rgba.rb'
+require './rack_color_img.rb'
+require './rack_gradient.rb'
+require './rack_noise.rb'
+require './rack_noise_gradient.rb'
+   #require 'rack/reloader'
 require 'time'
 require 'digest/md5'
-# require 'rack/cache'
+  # require 'rack/cache'
 
 =begin
 use Rack::Cache,
@@ -18,10 +18,12 @@ use Rack::Cache,
 =end
 
 # use Rack::Reloader
-use Rack::Rgba
-use Rack::ColorImg
-use Rack::Gradient
-use Rack::Noise
-use Rack::NoiseGradient
+
+
+use ::Rack::Rgba
+use ::Rack::ColorImg
+use ::Rack::Gradient
+use ::Rack::Noise
+use ::Rack::NoiseGradient
 
 run lambda {|x| [200, {"Content-Type" => 'text/html'}, "Hello"]}

@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    puma (2.12.2)
+    rmagick (2.15.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puma
+  rmagick

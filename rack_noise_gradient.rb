@@ -16,7 +16,7 @@ module Rack
         [200, {"Content-Type" => "image/png",
                "Content-Length" => blob.length.to_s,
                "Cache-Control" => 'public, max-age=31557600'
-         }, blob.to_s]
+         }, [blob.to_s]]
       else
         @app.call(env)
       end
