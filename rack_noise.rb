@@ -10,7 +10,13 @@ module Rack
         r,g,b,a = colors[1], colors[2], colors[3], colors[4]
         i = Magick::Image.new(150,90) {|x| x.background_color = "rgba(#{r},#{g},#{b},#{a})"
           x.format = 'png'}
-        6.times { i = i.add_noise(Magick::GaussianNoise) }
+        #1.times { i = i.add_noise(Magick::GaussianNoise) }
+        #6.times { i = i.add_noise(Magick::UniformNoise) }
+        4.times { i = i.add_noise_channel(Magick::GaussianNoise,
+                                          Magick::LuminosityChannel) }
+        #1.times { i = i.add_noise_channel(Magick::GaussianNoise, Magick::SaturationChannel) }                        
+
+        # 6.times { i = i.add_noise(Magick::GaussianNoise) }        
 #        i = i.gaussian_blur(0.1)
         blob = i.to_blob            
         [200, {"Content-Type" => "image/png", 
