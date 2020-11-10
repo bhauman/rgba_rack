@@ -26,4 +26,4 @@ use ::Rack::Gradient
 use ::Rack::Noise
 use ::Rack::NoiseGradient
 
-run lambda {|x| [200, {"Content-Type" => 'text/html'}, "Hello"]}
+run lambda {|x| [200, {"Content-Type" => 'text/html'}, ["Hello"]]}

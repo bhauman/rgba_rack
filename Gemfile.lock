@@ -1,12 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    puma (2.12.2)
-    rmagick (2.15.3)
+    nio4r (2.5.4)
+    puma (5.0.4)
+      nio4r (~> 2.0)
+    rack (2.2.3)
+    rmagick (4.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   puma
+  rack
   rmagick
+
+RUBY VERSION
+   ruby 2.6.6p146
+
+BUNDLED WITH
+   2.1.4

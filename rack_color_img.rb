@@ -1,5 +1,6 @@
 require 'rmagick'
 require 'open-uri'
+require 'rack'
 
 module Rack
   class ColorImg
@@ -25,7 +26,7 @@ module Rack
                                                         x.format = 'png'}
         
         res = source.composite(hue_img, Magick::CenterGravity, Magick::HueCompositeOp)
-        res = res.composite(source, Magick::CenterGravity, Magick::CopyOpacityCompositeOp)
+        res = res.composite(source, Magick::CenterGravity, Magick::CopyAlphaCompositeOp)
         
         blob = res.to_blob            
         [200, {"Content-Type" => "image/png", 
